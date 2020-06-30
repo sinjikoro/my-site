@@ -3,7 +3,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../layouts"
 import styles from "../styles"
 import presets from "../utils/presets"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
+import { Title } from "../components/Parts"
 
 class Index extends React.Component {
   render() {
@@ -12,32 +13,7 @@ class Index extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div>
-          <h1
-            css={{
-              ...scale(4 / 5),
-              fontWeight: `800`,
-              marginBottom: rhythm(2),
-            }}
-          >
-            This example demonstrates
-            {` `}
-            <a href="https://www.gatsbyjs.org/packages/gatsby-transformer-remark/">
-              gatsby-transformer-remark
-            </a>
-            {` `}
-            and its plugins. It uses
-            {` `}
-            <a href="https://github.com/KyleAMathews/typography.js">
-              Typography.js
-            </a>
-            {` `}
-            and self-hosted fonts via the
-            {` `}
-            <a href="https://github.com/KyleAMathews/typefaces">Typefaces</a>
-            {` `}
-            project.
-            {}
-          </h1>
+          <Title text="shinnaga's site" />
           <ul
             css={{
               marginBottom: rhythm(2),

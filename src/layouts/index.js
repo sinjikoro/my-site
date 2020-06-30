@@ -1,7 +1,7 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
-import { scale } from "../utils/typography"
+import { StaticQuery, graphql } from "gatsby"
 import styles from "../styles"
+import { HeadMenu, Footer } from "../components/Parts"
 
 import "typeface-space-mono"
 import "typeface-spectral"
@@ -12,61 +12,15 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.css"
 class Layout extends React.Component {
   render() {
     return (
-      <StaticQuery
-        query={graphql`
-          query {
-            site {
-              siteMetadata {
-                author
-                homepage
-              }
-            }
-          }
-        `}
-        render={data => {
-          const { author, homepage } = data.site.siteMetadata
-          return (
-            <div>
-              <div {...styles.container} {...styles.verticalPadding}>
-                <Link
-                  to="/"
-                  css={{
-                    display: `inline-block`,
-                    textDecoration: `none`,
-                  }}
-                >
-                  <h1
-                    css={{
-                      ...scale(0),
-                      color: styles.colors.light,
-                      fontWeight: `normal`,
-                      lineHeight: 1,
-                      margin: 0,
-                    }}
-                  >
-                    gatsby-example-using-remark
-                  </h1>
-                </Link>
-              </div>
-              <div {...styles.container} {...styles.verticalPadding}>
-                {this.props.children}
-                <div
-                  css={{
-                    ...scale(-0.5),
-                    color: styles.colors.light,
-                  }}
-                >
-                  powered by
-                  {` `}
-                  <a target="_blank" rel="noopener noreferrer" href={homepage}>
-                    {author}
-                  </a>
-                </div>
-              </div>
-            </div>
-          )
-        }}
-      />
+      <div>
+        <div {...styles.container} {...styles.verticalPadding}>
+          <HeadMenu text="top" />
+        </div>
+        <div {...styles.container} {...styles.verticalPadding}>
+          {this.props.children}
+          <Footer />
+        </div>
+      </div>
     )
   }
 }
