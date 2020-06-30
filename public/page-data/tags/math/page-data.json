@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-template-tag-page-js","path":"/tags/math/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/katex/"},"frontmatter":{"title":"Rendering math equations with KaTeX"}}}]}},"pageContext":{"tag":"math"}}}

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  gatsby:
+    container_name: my-site
+    build: ./
+    tty: true
+    volumes:
+      - /app/node_modules
+      - ./:/app
+    ports:
+      - "8000:8000"
