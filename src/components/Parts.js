@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 import styles from "../styles"
 import { StaticQuery, graphql } from "gatsby"
+import presets from "../utils/presets"
 
 export const HeadMenu = (props) => {
   return(
@@ -75,3 +76,45 @@ export const Footer = (props) => {
     />
   )
 }
+
+export const Posts = (props) => {
+  return (
+    <ul
+      css={{
+        marginBottom: rhythm(2),
+        marginTop: rhythm(2),
+        marginLeft: 0,
+        listStyle: `none`,
+      }}
+    >
+      {props.children}
+    </ul>
+  )
+}
+
+export const Post = (props) => {
+  const slug = props.slug
+  const date = props.date
+  const title = props.title
+
+  return(
+    <li key={slug}>
+      <span
+        css={{
+          color: styles.colors.light,
+          display: `block`,
+          [presets.Tablet]: {
+            float: `right`,
+            marginLeft: `1rem`,
+          },
+        }}
+      >
+        {date}
+      </span>
+      <Link to={slug} className="link-underline">
+        {title}
+      </Link>
+    </li>
+  )
+}
+

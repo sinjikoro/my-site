@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `gatsby-example-using-remark`,
+    title: `shinnaga's site`,
     author: `@gatsbyjs`,
     description: `Blazing fast modern site generator for React`,
     homepage: `https://www.gatsbyjs.org`,

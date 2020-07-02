@@ -1,5 +1,4 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
 import styles from "../styles"
 import { HeadMenu, Footer } from "../components/Parts"
 
