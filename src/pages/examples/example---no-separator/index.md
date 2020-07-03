@@ -2,7 +2,7 @@
 title: "A Default, 140 Character Excerpt"
 draft: false
 example: true
-author: Daisy Buchanan
+author: shinnaga
 ---
 
 This example uses the default pruning method.

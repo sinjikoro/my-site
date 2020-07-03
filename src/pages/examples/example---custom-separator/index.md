@@ -2,7 +2,7 @@
 title: "Getting an Excerpt with a Separator"
 draft: false
 example: true
-author: Daisy Buchanan
+author: shinnaga
 ---
 
 This example uses a custom excerpt_separator.
