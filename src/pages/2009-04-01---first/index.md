@@ -2,7 +2,7 @@
 title: "first"
 date: "2009-04-01"
 draft: false
-author: Shinnaga
+author: shinnaga
 tags:
   - remark
   - linked files

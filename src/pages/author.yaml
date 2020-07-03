@@ -1,3 +1,9 @@
-- id: Shinnaga
+- id: Daisy Buchanan
+  avatar: avatars/daisy.jpg
+  bio: is an attractive, if shallow and self-absorbed, young woman.
+- id: Jay Gatsby
+  avatar: avatars/jay.jpg
+  bio: is a mysterious millionaire with shady business connections.
+- id: shinnaga
   avatar: avatars/shinnaga.jpg
   bio: Sagging Engineer
