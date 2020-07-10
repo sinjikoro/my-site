@@ -13,7 +13,8 @@ class Layout extends React.Component {
     return (
       <div>
         <div {...styles.container} {...styles.verticalPadding}>
-          <HeadMenu text="top" />
+          <HeadMenu text="blog" link="/" />
+          <HeadMenu text="profile" link="/profile" />
         </div>
         <div {...styles.container} {...styles.verticalPadding}>
           {this.props.children}

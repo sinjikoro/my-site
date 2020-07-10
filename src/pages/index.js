@@ -6,12 +6,11 @@ import { Title, Post, Posts } from "../components/Parts"
 class Index extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
-    const title = this.props.data.site.siteMetadata.title
-
+ 
     return (
       <Layout location={this.props.location}>
         <div>
-          <Title text={ title } />
+          <Title>blog</Title>
           <Posts>
             {posts.map(post => (
               <Post 
@@ -31,11 +30,6 @@ export default Index
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: ASC }

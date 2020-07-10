@@ -8,7 +8,7 @@ import presets from "../utils/presets"
 export const HeadMenu = (props) => {
   return(
     <Link
-    to="/"
+    to={props.link}
     css={{
       display: `inline-block`,
       textDecoration: `none`,
@@ -20,7 +20,7 @@ export const HeadMenu = (props) => {
           color: styles.colors.light,
           fontWeight: `normal`,
           lineHeight: 1,
-          margin: 0,
+          margin: 5,
         }}
       >
         {props.text}
@@ -38,7 +38,7 @@ export const Title = (props) => {
         marginBottom: rhythm(2),
       }}
     >
-      {props.text}
+      {props.children}
     </h1>
   )
 }
@@ -65,7 +65,7 @@ export const Footer = (props) => {
           color: styles.colors.light,
         }}
         >
-          powered by
+          created by
           {` `}
           <a target="_blank" rel="noopener noreferrer" href={homepage}>
             {author}
@@ -118,3 +118,36 @@ export const Post = (props) => {
   )
 }
 
+export const Section = (props) => {
+  return(
+    <>
+      <h2
+      css={{
+        ...scale(1 / 2),
+        fontWeight: `800`,
+        marginBottom: rhythm(0),
+      }}
+      >
+        { props.title }
+      </h2>
+      { props.children }
+    </>
+  )
+}
+
+export const SubSection = (props) => {
+  return(
+    <>
+      <p
+      css={{
+        ...scale(1 / 2),
+        marginTop: rhythm(2),
+        marginBottom: rhythm(1 / 2),
+      }}
+      >
+        { props.title }
+      </p>
+      { props.children }
+    </>
+  )
+}

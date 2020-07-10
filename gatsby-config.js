@@ -1,9 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `shinnaga's site`,
-    author: `@gatsbyjs`,
-    description: `Blazing fast modern site generator for React`,
-    homepage: `https://www.gatsbyjs.org`,
+    author: `@shinnaga`,
+    homepage: `https://twitter.com/shinnaaaga`,
   },
   mapping: {
     "MarkdownRemark.frontmatter.author": `AuthorYaml`,
