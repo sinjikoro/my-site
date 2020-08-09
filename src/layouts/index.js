@@ -8,13 +8,19 @@ import "typeface-spectral"
 import "prismjs/themes/prism-solarizedlight.css"
 import "prismjs/plugins/line-numbers/prism-line-numbers.css"
 
+const headMenus = [
+  {text: 'blog', link: '/'},
+  {text: 'profile', link: '/profile'},
+]
+
 class Layout extends React.Component {
   render() {
     return (
       <div>
         <div {...styles.container} {...styles.verticalPadding}>
-          <HeadMenu text="blog" link="/" />
-          <HeadMenu text="profile" link="/profile" />
+          {headMenus.map((menu) => (
+            <HeadMenu text={menu.text} link={menu.link} />
+          ))}
         </div>
         <div {...styles.container} {...styles.verticalPadding}>
           {this.props.children}

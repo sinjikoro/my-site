@@ -141,13 +141,18 @@ export const SubSection = (props) => {
       <p
       css={{
         ...scale(1 / 2),
-        marginTop: rhythm(2),
-        marginBottom: rhythm(1 / 2),
+        margin: [rhythm(2), 0, rhythm(1 / 2), rhythm(1 / 2)],
       }}
       >
         { props.title }
       </p>
-      { props.children }
+      <p
+      css={{
+        marginLeft: rhythm(1 / 2)
+      }}
+      >
+        { props.children }
+      </p>
     </>
   )
 }
